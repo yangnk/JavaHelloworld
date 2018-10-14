@@ -10,7 +10,7 @@ import java.io.InputStream;
  */
 public class Test {
 	public static void main(String[] args) throws IOException {
-		File file = new File("E:\\myCode\\JavaHelloworld\\src\\nio\\data.txt");
+		File file = new File("/Users/yangnk/IdeaProjects/JavaHelloworld/src/nio/data.txt");
 		InputStream inputStream = new FileInputStream(file);
 		byte[] bytes = new byte[1024];
 		inputStream.read(bytes);
