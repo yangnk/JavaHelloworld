@@ -1,4 +1,4 @@
-package test;
+package io;
 
 import java.io.*;
 
@@ -21,16 +21,9 @@ public class IOTest{
         os.flush();
         //打印输出流中的内容
         byte[] bytes = os.toByteArray();
-//        for (int i = 0; i < bytes.length; i++) {
-//            System.out.println("******第" + i + "个******");
-//            System.out.println(bytes[i]);
-//        }
         //控制台输入，打印出来
         InputStream is = new ByteArrayInputStream(bytes);
         int c1;
-//        c1 = (char) is.read();
-//        System.out.println(c1);
-//        byte[] c1 = new byte[100];
         while ((c1 = (is.read()))!= -1) {
             System.out.println("************");
             System.out.println(c1);
