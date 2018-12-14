@@ -3,3 +3,10 @@
 .idea/compiler.xml
 .idea/vcs.xml
 .idea/workspace.xml
+/target/
+.DS_Store
+src/main/java/.DS_Store
+src/main/java/concurrent/
+src/main/resources/
+src/test/java/
+target/
