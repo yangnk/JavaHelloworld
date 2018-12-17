@@ -8,3 +8,6 @@
 src/main/java/.DS_Store
 src/test/java/
 target/
+/JavaHelloworld.iml
+/.gitignore
+
