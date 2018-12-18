@@ -10,3 +10,4 @@ src/test/java/
 target/
 /JavaHelloworld.iml
 /.gitignore
+/src/main/java/myTest/
