@@ -6,7 +6,7 @@ package thread;
  * @author yangningkai
  * @create 2018-11-11 下午4:01
  **/
-public class ThreadTest implements Runnable{
+public class synchronizedSample implements Runnable{
 
     int number = 10;
 
@@ -25,7 +25,6 @@ public class ThreadTest implements Runnable{
              * 是否被可以访问其他同步代码块
              */
             Thread.sleep(2000);
-//            this.wait(2000);
             number *= 200;
         }
     }
@@ -40,7 +39,7 @@ public class ThreadTest implements Runnable{
     }
 
     public static void main(String[] args) throws Exception {
-        ThreadTest threadTest = new ThreadTest();
+        synchronizedSample threadTest = new synchronizedSample();
         Thread thread = new Thread(threadTest);
         thread.start();
         threadTest.secondMethod();

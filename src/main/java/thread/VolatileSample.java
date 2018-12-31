@@ -6,7 +6,7 @@ package thread;
  * @author yangningkai
  * @create 2018-12-11 下午4:41
  **/
-public class Volatile extends Object implements Runnable {
+public class VolatileSample extends Object implements Runnable {
     //value变量没有被标记为volatile
     private int value;
     //missedIt变量被标记为volatile
@@ -14,7 +14,7 @@ public class Volatile extends Object implements Runnable {
     //creationTime不需要声明为volatile，因为代码执行中它没有发生变化
     private long creationTime;
 
-    public Volatile() {
+    public VolatileSample() {
         value = 10;
         missedIt = false;
         //获取当前时间，亦即调用Volatile构造函数时的时间
@@ -82,7 +82,7 @@ public class Volatile extends Object implements Runnable {
     public static void main(String[] args) {
         try {
             //通过该构造函数可以获取实时时钟的当前时间
-            Volatile vol = new Volatile();
+            VolatileSample vol = new VolatileSample();
 
             //稍停100ms，以让实时时钟稍稍超前获取时间，使print（）中创建的消息打印的时间值大于0
             Thread.sleep(100);
