@@ -2,6 +2,7 @@ package myTest;
 
 import java.io.*;
 import java.nio.Buffer;
+import java.nio.channels.SocketChannel;
 
 /**
  * ${DESCRIPTION}
@@ -11,9 +12,16 @@ import java.nio.Buffer;
  **/
 public class Test {
     public static void main(String[] args) throws IOException {
-        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-        BufferedReader reader = new BufferedReader(inputStreamReader);
-        String s = reader.readLine();
-        System.out.println(s);
+        String s = new String();
+        System.out.println("syn上面");
+        synchronized (s) {
+            System.out.println("syn第一行");
+            try {
+                s.wait();
+                System.out.println("wait下一行");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@ package thread;
  * @author yangningkai
  * @create 2018-11-11 下午4:18
  **/
-public class TestSleep {
+public class SleepSample {
     public static void main(String[] args) {
         new Thread(new Thread1()).start();
         try {
@@ -20,12 +20,12 @@ public class TestSleep {
     private static class Thread1 implements Runnable{
         @Override
         public void run(){
-            synchronized (TestSleep.class) {
+            synchronized (SleepSample.class) {
                 System.out.println("enter thread1...");
                 System.out.println("thread1 is waiting...");
                 try {
                     //调用wait()方法，线程会放弃对象锁，进入等待此对象的等待锁定池
-                    TestSleep.class.wait();
+                    SleepSample.class.wait();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -38,11 +38,11 @@ public class TestSleep {
     private static class Thread2 implements Runnable{
         @Override
         public void run(){
-            synchronized (TestSleep.class) {
+            synchronized (SleepSample.class) {
                 System.out.println("enter thread2....");
                 System.out.println("thread2 is sleep....");
                 //只有针对此对象调用notify()方法后本线程才进入对象锁定池准备获取对象锁进入运行状态。
-                TestSleep.class.notify();
+                SleepSample.class.notify();
                 try {
                     Thread.sleep(5000);
                 } catch (Exception e) {

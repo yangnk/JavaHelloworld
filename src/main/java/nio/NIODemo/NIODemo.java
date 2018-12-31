@@ -1,5 +1,6 @@
 package nio.NIODemo;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -15,11 +16,12 @@ import java.nio.channels.FileChannel;
 public class NIODemo {
     public static void main(String[] args) throws IOException {
         RandomAccessFile aFile = new RandomAccessFile("/Users/yangnk/IdeaProjects/JavaHelloworld/src/main/java/nio/NIODemo/test.txt", "rw");
+        //创建channel
         FileChannel inChannel = aFile.getChannel();
+        //创建buffer
         ByteBuffer buf = ByteBuffer.allocate(48);
         int bytesRead = inChannel.read(buf);
         while (bytesRead != -1) {
-
             System.out.println("Read " + bytesRead);
             buf.flip();
 
