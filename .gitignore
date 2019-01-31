@@ -11,3 +11,6 @@ target/
 /JavaHelloworld.iml
 /.gitignore
 /src/main/java/myTest/
+/src/main/java/test/
+123.dat
+src/main/resources/
