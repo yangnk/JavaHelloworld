@@ -4,6 +4,7 @@
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.time.LocalDate;
 
@@ -14,17 +15,17 @@ import java.time.LocalDate;
  * @Version:
  */
 public class tst {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
         LocalDate localDate = LocalDate.now();
         System.out.println(localDate);
 //        printTable1(testMethod, 1);
         Class cls = tst.class;
-        try {
-            Method addMethod = cls.getMethod("testMethod", new Class[]{String.class});
+//        try {
+            Method addMethod = cls.getMethod("test1Method", new Class[]{String.class});
             addMethod.invoke(null, "tst");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
 
     }
