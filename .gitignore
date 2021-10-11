@@ -6,11 +6,7 @@
 /target/
 .DS_Store
 src/main/java/.DS_Store
-src/test/java/
 target/
 /JavaHelloworld.iml
 /.gitignore
-/src/main/java/myTest/
-/src/main/java/test/
-123.dat
-src/main/resources/
+/src/main/java/test1/
