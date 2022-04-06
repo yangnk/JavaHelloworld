@@ -23,7 +23,7 @@
 7. 反射相关（reflect）
     - reflect demo
     - 动态代理
-8. 多线程相关(thread)
+8. 多线程相关(concurrent.thread)
     - 多线程创建和使用
     - 线程池创建和使用
     - Lock的使用

@@ -18,7 +18,7 @@ public class Test0628 {
 //                super.run();
                 try {
                     Thread.sleep(1000);
-                    System.out.println("first thread run success.");
+                    System.out.println("first concurrent.thread run success.");
                     countDownLatch.countDown();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -33,7 +33,7 @@ public class Test0628 {
 //                super.run();
                 try {
                     Thread.sleep(1000);
-                    System.out.println("second thread run success.");
+                    System.out.println("second concurrent.thread run success.");
                     countDownLatch.countDown();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
