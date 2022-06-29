@@ -9,14 +9,14 @@
     - Iterator和相关工具类
 2. 并发相关（concurrent）
     - ThreadLocal
-3. IO相关（io）
+3. IO相关（io.io）
     - 序列化
 4. JVM相关（jvm）
     - ClassLoader
     - 内存模型
 5. 基础数据类型（lang）
     - String 类型相关
-6. NIO(nio)
+6. NIO(io)
     - NIO 3大组件
     - 阻塞模型的server
     - 非阻塞模型的server
