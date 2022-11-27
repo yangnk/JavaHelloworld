@@ -8,7 +8,7 @@ import java.io.*;
  * @author yangningkai
  * @create 2018-11-10 下午9:09
  **/
-public class CloneSerialization implements Cloneable, Serializable{
+public class CloneSerialization implements Cloneable, Serializable {
     @Override
     public Object clone() {
         //写进去

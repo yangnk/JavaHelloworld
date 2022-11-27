@@ -10,8 +10,9 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author yangningkai
  * @create 2018-11-14 下午10:30
  **/
-public class MapCompare implements Serializable{
+public class MapCompare implements Serializable {
     private static final long serialVersionUID = -1295439174686966166L;
+
     public static void main(String[] args) {
         ConcurrentHashMap<String, String> concurrentHashMap = new ConcurrentHashMap();
         HashMap<String, String> hashMap = new HashMap<>();
@@ -22,7 +23,7 @@ public class MapCompare implements Serializable{
             concurrentHashMap.put(String.valueOf(i), "test");
         }
         Long after = System.currentTimeMillis();
-        System.out.println("concurrenthashmap耗时："+ (after - before));
+        System.out.println("concurrenthashmap耗时：" + (after - before));
 
         //hashmap耗时
         Long before1 = System.currentTimeMillis();
@@ -30,6 +31,6 @@ public class MapCompare implements Serializable{
             hashMap.put(String.valueOf(i), "test");
         }
         Long after1 = System.currentTimeMillis();
-        System.out.println("hashmap耗时："+ (after1 - before1));
+        System.out.println("hashmap耗时：" + (after1 - before1));
     }
 }

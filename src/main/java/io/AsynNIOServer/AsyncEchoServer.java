@@ -15,18 +15,18 @@ import java.util.concurrent.*;
  * @create 2018-12-14 下午3:12
  **/
 public class AsyncEchoServer {
- 
-            public static int DEFAULT_PORT = 8888 ;
- 
-            public static void main(String[] args) throws IOException {
+
+    public static int DEFAULT_PORT = 8888;
+
+    public static void main(String[] args) throws IOException {
         int port;
- 
+
         try {
             port = Integer.parseInt(args[0]);
         } catch (RuntimeException ex) {
             port = DEFAULT_PORT;
         }
- 
+
         ExecutorService taskExecutor = Executors.newCachedThreadPool(Executors.defaultThreadFactory());
         // create asynchronous server socket channel bound to the default group
         try (AsynchronousServerSocketChannel asynchronousServerSocketChannel = AsynchronousServerSocketChannel.open()) {
@@ -39,11 +39,9 @@ public class AsyncEchoServer {
                 // display a waiting message while ... waiting clients
                 System.out.println("Waiting for connections ...");
                 while (true) {
-                    Future<AsynchronousSocketChannel> asynchronousSocketChannelFuture = asynchronousServerSocketChannel
-                            .accept();
+                    Future<AsynchronousSocketChannel> asynchronousSocketChannelFuture = asynchronousServerSocketChannel.accept();
                     try {
-                        final AsynchronousSocketChannel asynchronousSocketChannel = asynchronousSocketChannelFuture
-                                .get();
+                        final AsynchronousSocketChannel asynchronousSocketChannel = asynchronousSocketChannelFuture.get();
                         Callable<String> worker = new Callable<String>() {
                             @Override
                             public String call() throws Exception {

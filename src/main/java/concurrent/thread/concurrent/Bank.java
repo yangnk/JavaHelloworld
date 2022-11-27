@@ -16,6 +16,7 @@ public class Bank {
         System.out.println("取钱后金额：" + money);
         return money;
     }
+
     //存钱
     synchronized void setMoney(int setMoney) {
         money += setMoney;

@@ -16,6 +16,7 @@ public class SocketSample {
         final String host = "localhost";
         new SocketSample().scan(host);
     }
+
     //连接localhost
     public void scan(String host) {
         Socket socket = null;
@@ -26,12 +27,12 @@ public class SocketSample {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 socket.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        }
     }
+}

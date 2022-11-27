@@ -24,13 +24,14 @@ public class BankApp {
 
 }
 
-class BankAppThread implements Runnable{
+class BankAppThread implements Runnable {
     Bank bank;
 
     public BankAppThread(Bank bank) {
         this.bank = bank;
 
     }
+
     @Override
     public void run() {
 //            super.run();

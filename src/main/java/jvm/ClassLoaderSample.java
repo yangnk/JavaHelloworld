@@ -27,7 +27,7 @@ public class ClassLoaderSample {
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException {
         URL[] uRls = Launcher.getBootstrapClassPath().getURLs();
-        for (URL url:uRls) {
+        for (URL url : uRls) {
             System.out.println(url.toExternalForm());
         }
 //        Class<ClassLoaderSample> classLoaderSample1 = ClassLoaderSample.class;
@@ -54,8 +54,6 @@ public class ClassLoaderSample {
 
 
 //        System.out.println(s);
-
-
 
 
 //        String classLoader = ClassLoader.getSystemClassLoader().toString();

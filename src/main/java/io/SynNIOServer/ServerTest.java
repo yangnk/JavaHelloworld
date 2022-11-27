@@ -29,7 +29,7 @@ public class ServerTest {
         }
 
         MultiplexerTimeServer timeServer = new MultiplexerTimeServer(port);
-        new Thread(timeServer,"NIO-MultiplexerTimeServer-001").start();
+        new Thread(timeServer, "NIO-MultiplexerTimeServer-001").start();
     }
 }
 
@@ -110,7 +110,7 @@ class MultiplexerTimeServer implements Runnable {
         if (key.isValid()) {
             if (key.isAcceptable()) {
                 //获取服务器通道
-                ServerSocketChannel ssc = (ServerSocketChannel)key.channel();
+                ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
                 //执行阻塞方法(等待客户端资源)
                 SocketChannel sc = ssc.accept();
                 //设置为非阻塞模式
@@ -120,7 +120,7 @@ class MultiplexerTimeServer implements Runnable {
             }
             if (key.isReadable()) {
                 //读取数据
-                SocketChannel sc = (SocketChannel)key.channel();
+                SocketChannel sc = (SocketChannel) key.channel();
                 ByteBuffer readBuffer = ByteBuffer.allocate(1024);
                 int readBytes = sc.read(readBuffer);
                 if (readBytes > 0) {
@@ -150,7 +150,7 @@ class MultiplexerTimeServer implements Runnable {
         }
     }
 
-    private void doWrite(SocketChannel channel, String response) throws IOException{
+    private void doWrite(SocketChannel channel, String response) throws IOException {
         if (response != null && response.trim().length() > 0) {
             System.out.println(response);
             byte[] bytes = response.getBytes();

@@ -10,7 +10,7 @@ import java.util.List;
  * @create 2018-12-12 下午4:26
  **/
 public class HeapOOM {
-    static class OOMObject{
+    static class OOMObject {
     }
 
     public static void main(String[] args) {

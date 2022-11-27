@@ -48,7 +48,7 @@ class Inc {
             System.out.println("a:" + a);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
 //            lock.unlock();
         }
     }

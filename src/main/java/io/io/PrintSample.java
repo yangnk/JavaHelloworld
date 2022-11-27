@@ -12,7 +12,7 @@ import java.io.*;
  */
 public class PrintSample {
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader( System.in));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println(bufferedReader.readLine());
     }
 }

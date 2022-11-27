@@ -13,6 +13,7 @@ import java.util.UUID;
  **/
 public class BIOClient {
     Socket socket = null;
+
     public BIOClient() {
         try {
             socket = new Socket("localhost", 8080);
@@ -20,6 +21,7 @@ public class BIOClient {
             e.printStackTrace();
         }
     }
+
     private void sender() {
         OutputStream outputStream = null;
         try {

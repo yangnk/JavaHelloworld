@@ -8,7 +8,7 @@ import java.io.*;
  * @author yangningkai
  * @create 2018-11-10 下午12:07
  **/
-public class IOTest{
+public class IOTest {
     public static void main(String[] args) throws IOException {
         int a = 2;
         int b = 9;
@@ -24,7 +24,7 @@ public class IOTest{
         //控制台输入，打印出来
         InputStream is = new ByteArrayInputStream(bytes);
         int c1;
-        while ((c1 = (is.read()))!= -1) {
+        while ((c1 = (is.read())) != -1) {
             System.out.println("************");
             System.out.println(c1);
         }

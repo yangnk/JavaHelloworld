@@ -21,8 +21,7 @@ public class ServerHandler implements Runnable {
 
     @Override
     public void run() {
-        try (BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        PrintWriter output = new PrintWriter(socket.getOutputStream(),true)){
+        try (BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream())); PrintWriter output = new PrintWriter(socket.getOutputStream(), true)) {
             String s = "";
             while ((s = input.readLine()) != null) {
                 System.out.println(s);

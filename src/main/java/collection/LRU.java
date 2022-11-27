@@ -10,7 +10,7 @@ import java.util.Map;
  * @author yangningkai
  * @create 2018-12-09 下午10:19
  **/
-public class LRU<K, V> extends LinkedHashMap<K, V> implements Serializable, Map<K, V>{
+public class LRU<K, V> extends LinkedHashMap<K, V> implements Serializable, Map<K, V> {
     public LRU(int initialCapacity, float loadFactor, boolean accessOrder) {
         super(initialCapacity, loadFactor, accessOrder);
     }
@@ -24,7 +24,7 @@ public class LRU<K, V> extends LinkedHashMap<K, V> implements Serializable, Map<
     }
 
     public static void main(String[] args) {
-        LRU<String, String> lru = new LRU<String, String>(10,0.75f,true);
+        LRU<String, String> lru = new LRU<String, String>(10, 0.75f, true);
         String s = "qwertyuiop";
 
         for (int i = 0; i < s.length(); i++) {

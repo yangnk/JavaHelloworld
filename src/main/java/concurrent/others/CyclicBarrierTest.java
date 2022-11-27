@@ -25,8 +25,10 @@ public class CyclicBarrierTest {
             new Writer(cyclicBarrier).start();
         }
     }
-    static class Writer extends Thread{
+
+    static class Writer extends Thread {
         private CyclicBarrier cyclicBarrier;
+
         public Writer(CyclicBarrier cyclicBarrier) {
             this.cyclicBarrier = cyclicBarrier;
         }
@@ -35,10 +37,10 @@ public class CyclicBarrierTest {
         public void run() {
 //            super.run();
             try {
-                System.out.println(Thread.currentThread().getName()+"  start.");
+                System.out.println(Thread.currentThread().getName() + "  start.");
                 Thread.sleep(3000);
                 cyclicBarrier.await();
-                System.out.println(Thread.currentThread().getName()+"  end.");
+                System.out.println(Thread.currentThread().getName() + "  end.");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (BrokenBarrierException e) {

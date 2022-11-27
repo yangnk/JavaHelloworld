@@ -23,7 +23,7 @@ public class NIODemo {
             System.out.println("Read " + bytesRead);
             buf.flip();
 
-            while(buf.hasRemaining()){
+            while (buf.hasRemaining()) {
                 System.out.print((char) buf.get());
             }
 

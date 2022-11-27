@@ -15,14 +15,14 @@ public class CountDownLatchTest {
             @Override
             public void run() {
 //     super.run();
-                System.out.println(Thread.currentThread().getName()+"start.");
+                System.out.println(Thread.currentThread().getName() + "start.");
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 countDownLatch.countDown();
-                System.out.println(Thread.currentThread().getName()+"end.");
+                System.out.println(Thread.currentThread().getName() + "end.");
             }
         }.start();
 
@@ -30,14 +30,14 @@ public class CountDownLatchTest {
             @Override
             public void run() {
 //     super.run();
-                System.out.println(Thread.currentThread().getName()+"start.");
+                System.out.println(Thread.currentThread().getName() + "start.");
                 try {
                     Thread.sleep(6000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 countDownLatch.countDown();
-                System.out.println(Thread.currentThread().getName()+"end.");
+                System.out.println(Thread.currentThread().getName() + "end.");
             }
         }.start();
         System.out.println("countDownLatch test start.");

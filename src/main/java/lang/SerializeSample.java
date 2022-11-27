@@ -8,9 +8,10 @@ import java.io.*;
  * @author yangningkai
  * @create 2019-01-20 下午12:28
  **/
-public class SerializeSample implements Serializable{
+public class SerializeSample implements Serializable {
     private static final long serialVersionUID = 119989231699812337L;
     public int a = 0;
+
     public static void main(String[] args) {
         try {
             ObjectOutput objectOutput = new ObjectOutputStream(new FileOutputStream("123.dat"));

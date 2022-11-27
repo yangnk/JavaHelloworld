@@ -9,7 +9,7 @@ import java.net.Socket;
  * @author yangningkai
  * @create 2018-12-13 下午10:46
  **/
-public class EchoServerHandler implements Runnable{
+public class EchoServerHandler implements Runnable {
     private Socket clientSocket;
 
     public EchoServerHandler(Socket socket) {
@@ -18,8 +18,7 @@ public class EchoServerHandler implements Runnable{
 
     @Override
     public void run() {
-        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-             PrintWriter printWriter = new PrintWriter(clientSocket.getOutputStream(),true);){
+        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream())); PrintWriter printWriter = new PrintWriter(clientSocket.getOutputStream(), true);) {
             String inputString;
             while ((inputString = bufferedReader.readLine()) != null) {
                 printWriter.write(inputString);

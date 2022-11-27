@@ -8,7 +8,7 @@ import java.util.*;
  * @author yangningkai
  * @create 2018-11-14 下午8:39
  **/
-public class CompareSample implements Comparable<CompareSample>{
+public class CompareSample implements Comparable<CompareSample> {
     int score;
     int average;
 
@@ -21,7 +21,7 @@ public class CompareSample implements Comparable<CompareSample>{
     public int compareTo(CompareSample o) {
         if (this.score != o.score) {
             return this.score > o.score ? 1 : -1;
-        }else {
+        } else {
             return this.average >= o.average ? 1 : -1;
         }
 //        return 0;
@@ -46,19 +46,19 @@ public class CompareSample implements Comparable<CompareSample>{
 //        compareSamplesList.sort();
 //        Arrays.sort(compareSamplesList);
         Collections.sort(compareSamplesList);
-        Arrays.sort(compareSamples, new Comparator< CompareSample>() {
+        Arrays.sort(compareSamples, new Comparator<CompareSample>() {
             @Override
             public int compare(CompareSample o1, CompareSample o2) {
                 if (o1.score != o2.score) {
                     return o1.score > o2.score ? 1 : -1;
-                }else {
+                } else {
                     return o1.average >= o2.average ? 1 : -1;
                 }
             }
         });
 
         for (int i = 0; i < compareSamplesList.size(); i++) {
-            System.out.println("====score is:"+compareSamplesList.get(i).score +", average is :"+ compareSamplesList.get(i).average);
+            System.out.println("====score is:" + compareSamplesList.get(i).score + ", average is :" + compareSamplesList.get(i).average);
         }
     }
 

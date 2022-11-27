@@ -21,7 +21,7 @@ public class HashMapSample {
         Iterator<Map.Entry<String, String>> iterator = hashMap.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, String> entry = iterator.next();
-            System.out.println("key: "+entry.getKey()+", value: "+entry.getValue());
+            System.out.println("key: " + entry.getKey() + ", value: " + entry.getValue());
         }
     }
 }
